@@ -24,7 +24,7 @@ def solve_quadratic(a: float, b: float, c: float):
     return ((-b + sqrt_d) / (2 * a), (-b - sqrt_d) / (2 * a))
 
 def complex_to_json(obj):
-    """JSON encoder fallback: json can't serialize complex numbers natively."""
+    """JSON encoder fallback: JSON can't serialize complex numbers natively."""
     if isinstance(obj, complex):
         return {"real": obj.real, "imag": obj.imag}
     raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
